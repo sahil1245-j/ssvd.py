@@ -1,0 +1,20 @@
+import random
+import string
+
+
+def generate_password():
+    # Prompt the user for the password length
+    length = int(input("Enter the desired length of the password: "))
+
+    # Define the characters that can be used in the password
+    all_characters = string.ascii_letters + string.digits + string.punctuation
+
+    # Ensure the generated password is of the specified length
+    password = ''.join(random.choice(all_characters) for _ in range(length))
+
+    # Display the generated password
+    print("\nGenerated Password: ", password)
+
+
+# Run the password generator
+generate_password()
